@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %}
+<title>Input field</title>
+
+{% endblock %} {% block body %} {% for i in range(1,82) %} i++{% endfor %}
+
+<form action="" method="post">
+  <div id="container">
+    {% for item in board %} {% for x in item %}
+    <input type="number" value="{{x}}" name="{{x}}" />
+
+    {% endfor %} {% endfor %}
+  </div>
+  <div class="container">
+    <input type="submit" />
+  </div>
+</form>
+
+{% endblock %}
